@@ -1,0 +1,86 @@
+# ------------------------------------------------------------------------------------------------
+# TOML simulation settings file
+# ------------------------------------------------------------------------------------------------
+
+name        = "settings"
+
+# ------------------------------------------------------------------------------------------------
+# Standard run parameters and settings
+# ------------------------------------------------------------------------------------------------
+[ run_params ]
+n_staff     = 15                    # Number of staff to spawn (not for visualisation)
+n_mobile    = 100                   # Number of mobile agents to spawn (not for visualisation)
+n_chair     = 10                    # Number of wheelchair agents to spawn (not for visualisation)
+vis_range   = 10                    # Range of agent vision
+real_vision = true                  # Use vision that is blocked by obstacles (true/false)
+sign_vision = 0.38                  # Fraction of agents that can see signs
+herd        = 0.60                  # Fraction of mobile agents that show herd mentality
+floorplan   = "Floorplan_complex.csv"   # Which floorplan option to use (simple/complex)
+figsize     = 10                    # Which figure size to use (standard is 10)
+lift_time   = 15                    # Number of ticks the elevator takes for a cycle
+tile_pop    = 8                     # Maximum number of agents in a tile
+stair_pop   = 2                     # Maximum number of agents in a stair tile
+steps       = 10                    # Number of timesteps (not for visualisation)
+
+# ------------------------------------------------------------------------------------------------
+# Floorplan parameters (Shit will break if you touch this)
+# ------------------------------------------------------------------------------------------------
+[ map_params ]
+grid_x      = 127                   # Grid size in x-direction
+grid_y      = 127                   # Grid size in y-direction
+map_yhalf   = 63                    # Half point of the map which seperates top and bottom floor
+stairs_jump = -67                   # Number of tiles in y to add if an agent takes the stairs or elevator
+
+# ------------------------------------------------------------------------------------------------
+# Agent speed management parameters and settings
+# ------------------------------------------------------------------------------------------------
+[ speed ]
+use_speed   = false                 # Use different agent speeds and speed distributions (true/false)
+vr_mobile   = [0.8, 1.4]            # Lower and upper bound for mobile agent speed
+vr_staff    = [1.0, 1.5]            # Lower and upper bound for staff speed
+vr_chair    = [0.5, 0.8]            # Lower and upper bound for wheelchair agent speed
+
+# ------------------------------------------------------------------------------------------------
+# Spawn map spawn rules and settings
+# ------------------------------------------------------------------------------------------------
+[ spawn_rules ]
+
+# ------------------------------------------------------------------------------------------------
+# index 2 - general care: values must add up to 1
+# ------------------------------------------------------------------------------------------------
+[[ general_care ]]
+mobile      = 0.7                   # Fraction of mobile agents spawning in marked areas of this type
+wheelchair  = 0.1                   # Fraction of wheelchair spawning in marked areas of this type
+staff       = 0.2                   # Fraction of staff agents spawning in marked areas of this type
+
+# ------------------------------------------------------------------------------------------------
+# index 3 - staff only: values must add up to 1
+# ------------------------------------------------------------------------------------------------
+[[ staff_only ]]
+mobile      = 0                   # Fraction of mobile agents spawning in marked areas of this type
+wheelchair  = 0                   # Fraction of wheelchair spawning in marked areas of this type
+staff       = 1                   # Fraction of staff agents spawning in marked areas of this type
+
+# ------------------------------------------------------------------------------------------------
+# index 4 - increased staff: values must add up to 1
+# ------------------------------------------------------------------------------------------------
+[[ more_staff ]]
+mobile      = 0.5                   # Fraction of mobile agents spawning in marked areas of this type
+wheelchair  = 0.2                   # Fraction of wheelchair spawning in marked areas of this type
+staff       = 0.3                   # Fraction of staff agents spawning in marked areas of this type
+
+# ------------------------------------------------------------------------------------------------
+# index 5 - high staff: values must add up to 1
+# ------------------------------------------------------------------------------------------------
+[[ high_staff ]]
+mobile      = 0                     # Fraction of mobile agents spawning in marked areas of this type
+wheelchair  = 0.67                  # Fraction of wheelchair spawning in marked areas of this type
+staff       = 0.33                  # Fraction of staff agents spawning in marked areas of this type
+
+# ------------------------------------------------------------------------------------------------
+# index 6 - general care: values must add up to 1
+# ------------------------------------------------------------------------------------------------
+[[ surgery ]]
+mobile      = 0                     # Fraction of mobile agents spawning in marked areas of this type
+wheelchair  = 0.33                  # Fraction of wheelchair spawning in marked areas of this type
+staff       = 0.67                  # Fraction of staff agents spawning in marked areas of this type
