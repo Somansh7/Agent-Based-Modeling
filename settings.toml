@@ -5,14 +5,16 @@
 name        = "settings"
 
 # ------------------------------------------------------------------------------------------------
-# Standard run parameters and settings
+# Standard run parameters and settings; Some of these are also changed by the slider
 # ------------------------------------------------------------------------------------------------
 [ run_params ]
 n_staff     = 15                    # Number of staff to spawn (not for visualisation)
 n_mobile    = 100                   # Number of mobile agents to spawn (not for visualisation)
 n_chair     = 10                    # Number of wheelchair agents to spawn (not for visualisation)
+n_total     = 100                  # Total number of agents placed if spawn map is used (not for visualisation
+use_map     = true                 # Use spawn map (true/false)
 vis_range   = 10                    # Range of agent vision
-real_vision = true                  # Use vision that is blocked by obstacles (true/false)
+real_vision = true                  # Use improved vision that is blocked by obstacles (true/false)
 sign_vision = 0.38                  # Fraction of agents that can see signs
 herd        = 0.60                  # Fraction of mobile agents that show herd mentality
 floorplan   = "Floorplan_complex.csv"   # Which floorplan option to use (simple/complex)
@@ -23,7 +25,7 @@ stair_pop   = 2                     # Maximum number of agents in a stair tile
 steps       = 10                    # Number of timesteps (not for visualisation)
 
 # ------------------------------------------------------------------------------------------------
-# Floorplan parameters (Shit will break if you touch this)
+# Floorplan parameters (ONLY CHANGE THESE IF THE FLOORPLAN IS OVERHAULED)
 # ------------------------------------------------------------------------------------------------
 [ map_params ]
 grid_x      = 127                   # Grid size in x-direction
@@ -48,7 +50,7 @@ vr_chair    = [0.5, 0.8]            # Lower and upper bound for wheelchair agent
 # ------------------------------------------------------------------------------------------------
 # index 2 - general care: values must add up to 1
 # ------------------------------------------------------------------------------------------------
-[[ general_care ]]
+[ spawn_rules.2 ]
 mobile      = 0.7                   # Fraction of mobile agents spawning in marked areas of this type
 wheelchair  = 0.1                   # Fraction of wheelchair spawning in marked areas of this type
 staff       = 0.2                   # Fraction of staff agents spawning in marked areas of this type
@@ -56,15 +58,15 @@ staff       = 0.2                   # Fraction of staff agents spawning in marke
 # ------------------------------------------------------------------------------------------------
 # index 3 - staff only: values must add up to 1
 # ------------------------------------------------------------------------------------------------
-[[ staff_only ]]
-mobile      = 0                   # Fraction of mobile agents spawning in marked areas of this type
-wheelchair  = 0                   # Fraction of wheelchair spawning in marked areas of this type
-staff       = 1                   # Fraction of staff agents spawning in marked areas of this type
+[ spawn_rules.3 ]
+mobile      = 0.0                   # Fraction of mobile agents spawning in marked areas of this type
+wheelchair  = 0.0                   # Fraction of wheelchair spawning in marked areas of this type
+staff       = 1.0                   # Fraction of staff agents spawning in marked areas of this type
 
 # ------------------------------------------------------------------------------------------------
 # index 4 - increased staff: values must add up to 1
 # ------------------------------------------------------------------------------------------------
-[[ more_staff ]]
+[ spawn_rules.4 ]
 mobile      = 0.5                   # Fraction of mobile agents spawning in marked areas of this type
 wheelchair  = 0.2                   # Fraction of wheelchair spawning in marked areas of this type
 staff       = 0.3                   # Fraction of staff agents spawning in marked areas of this type
@@ -72,15 +74,15 @@ staff       = 0.3                   # Fraction of staff agents spawning in marke
 # ------------------------------------------------------------------------------------------------
 # index 5 - high staff: values must add up to 1
 # ------------------------------------------------------------------------------------------------
-[[ high_staff ]]
-mobile      = 0                     # Fraction of mobile agents spawning in marked areas of this type
+[ spawn_rules.5 ]
+mobile      = 0.0                   # Fraction of mobile agents spawning in marked areas of this type
 wheelchair  = 0.67                  # Fraction of wheelchair spawning in marked areas of this type
 staff       = 0.33                  # Fraction of staff agents spawning in marked areas of this type
 
 # ------------------------------------------------------------------------------------------------
 # index 6 - general care: values must add up to 1
 # ------------------------------------------------------------------------------------------------
-[[ surgery ]]
-mobile      = 0                     # Fraction of mobile agents spawning in marked areas of this type
+[ spawn_rules.6 ]
+mobile      = 0.0                   # Fraction of mobile agents spawning in marked areas of this type
 wheelchair  = 0.33                  # Fraction of wheelchair spawning in marked areas of this type
 staff       = 0.67                  # Fraction of staff agents spawning in marked areas of this type
