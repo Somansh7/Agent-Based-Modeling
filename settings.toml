@@ -22,6 +22,7 @@ figsize     = 10                    # Which figure size to use (standard is 10)
 lift_time   = 15                    # Number of ticks the elevator takes for a cycle
 tile_pop    = 8                     # Maximum number of agents in a tile
 stair_pop   = 2                     # Maximum number of agents in a stair tile
+elevator_pop   = 4                     # Maximum number of agents in an elevator tile
 steps       = 10                    # Number of timesteps (not for visualisation)
 
 # ------------------------------------------------------------------------------------------------
@@ -31,7 +32,8 @@ steps       = 10                    # Number of timesteps (not for visualisation
 grid_x      = 127                   # Grid size in x-direction
 grid_y      = 127                   # Grid size in y-direction
 map_yhalf   = 63                    # Half point of the map which seperates top and bottom floor
-stairs_jump = -67                   # Number of tiles in y to add if an agent takes the stairs or elevator
+stairs_jump = -67                   # Number of tiles in y to add if an agent takes the stairs
+elevator_jump = -67                   # Number of tiles in y to add if an agent takes the elevator
 
 # ------------------------------------------------------------------------------------------------
 # Agent speed management parameters and settings
