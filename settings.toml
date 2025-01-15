@@ -8,12 +8,12 @@ name        = "settings"
 # Standard run parameters and settings; Some of these are also changed by the slider
 # ------------------------------------------------------------------------------------------------
 [ run_params ]
-n_staff     = 0                    # Number of staff to spawn (not for visualisation)
-n_mobile    = 10                   # Number of mobile agents to spawn (not for visualisation)
+n_staff     = 50                    # Number of staff to spawn (not for visualisation)
+n_mobile    = 100                   # Number of mobile agents to spawn (not for visualisation)
 n_chair     = 10                    # Number of wheelchair agents to spawn (not for visualisation)
-n_total     = 100                  # Total number of agents placed if spawn map is used (not for visualisation)
-steps       = 100                    # Number of timesteps (not for visualisation)
-use_map     = false                 # Use spawn map (true/false)
+n_total     = 100                   # Total number of agents placed if spawn map is used (not for visualisation)
+steps       = 10                    # Number of timesteps (not for visualisation)
+use_map     = true                  # Use spawn map (true/false)
 vis_range   = 10                    # Range of agent vision
 real_vision = true                  # Use improved vision that is blocked by obstacles (true/false)
 sign_vision = 0.38                  # Fraction of agents that can see signs
