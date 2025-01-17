@@ -8,17 +8,18 @@ name        = "settings"
 # Standard run parameters and settings; Some of these are also changed by the slider
 # ------------------------------------------------------------------------------------------------
 [ run_params ]
-n_staff     = 50                    # Number of staff to spawn (not for visualisation)
-n_mobile    = 100                   # Number of mobile agents to spawn (not for visualisation)
-n_chair     = 10                    # Number of wheelchair agents to spawn (not for visualisation)
-n_total     = 100                   # Total number of agents placed if spawn map is used (not for visualisation)
-steps       = 10                    # Number of timesteps (not for visualisation)
+n_staff     = 50                    # Number of staff to spawn (slider)
+n_mobile    = 100                   # Number of mobile agents to spawn (slider)
+n_chair     = 10                    # Number of wheelchair agents to spawn (slider)
+n_total     = 100                   # Total number of agents placed if spawn map is used (slider)
+steps       = 10                    # Number of timesteps (slider)
 use_map     = true                  # Use spawn map (true/false)
 vis_range   = 10                    # Range of agent vision
 real_vision = true                  # Use improved vision that is blocked by obstacles (true/false)
 sign_vision = 0.38                  # Fraction of agents that can see signs
 herd        = 0.60                  # Fraction of mobile agents that show herd mentality
 lift_use    = 0.50                  # Fraction of mobile agents that use the elevators if they come in sight
+follow_staff= 0.60
 floorplan   = "Floorplan_complex.csv"   # Which floorplan option to use (simple/complex)
 figsize     = 10                    # Which figure size to use (standard is 10)
 lift_time   = 15                    # Number of ticks the elevator takes for a cycle
@@ -40,7 +41,7 @@ stairs_jump = -67                   # Number of tiles in y to add if an agent ta
 elevator_jump = -67                   # Number of tiles in y to add if an agent takes the elevator
 
 # ------------------------------------------------------------------------------------------------
-# Agent speed management parameters and settings (Not fully implemented yet)
+# Agent speed management parameters and settings (Not fully yet)
 # ------------------------------------------------------------------------------------------------
 [ speed ]
 use_speed   = false                 # Use different agent speeds and speed distributions (true/false)
