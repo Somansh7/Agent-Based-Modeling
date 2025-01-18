@@ -29,6 +29,7 @@ elevator_pop= 4                     # Maximum number of agents in an elevator ti
 lift_timer  = 50                    # Number of steps for a full elevator cycle
 lift_init   = 30                    # Number of steps on the timer at the start of the simulation
 lift_wait   = 15                    # Number of steps agent wait in the lift to simulate going down down and exiting
+neigh_dist  = 30                    # Neighbouring distance within which heloing agents need to be found
 
 # ------------------------------------------------------------------------------------------------
 # Floorplan parameters (ONLY CHANGE THESE IF THE FLOORPLAN IS OVERHAULED)
