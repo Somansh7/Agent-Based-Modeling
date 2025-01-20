@@ -12,7 +12,7 @@ n_staff     = 50                    # Number of staff to spawn (slider)
 n_mobile    = 100                   # Number of mobile agents to spawn (slider)
 n_chair     = 10                    # Number of wheelchair agents to spawn (slider)
 n_total     = 100                   # Total number of agents placed if spawn map is used (slider)
-steps       = 10                    # Number of timesteps (slider)
+steps       = 150                    # Number of timesteps (slider)
 use_map     = true                  # Use spawn map (true/false)
 vis_range   = 10                    # Range of agent vision
 real_vision = true                  # Use improved vision that is blocked by obstacles (true/false)
@@ -29,7 +29,7 @@ elevator_pop= 4                     # Maximum number of agents in an elevator ti
 lift_timer  = 50                    # Number of steps for a full elevator cycle
 lift_init   = 30                    # Number of steps on the timer at the start of the simulation
 lift_wait   = 15                    # Number of steps agent wait in the lift to simulate going down down and exiting
-neigh_dist  = 30                    # Neighbouring distance within which heloing agents need to be found
+neigh_dist  = 40                    # Neighbouring distance within which heloing agents need to be found
 
 # ------------------------------------------------------------------------------------------------
 # Floorplan parameters (ONLY CHANGE THESE IF THE FLOORPLAN IS OVERHAULED)
