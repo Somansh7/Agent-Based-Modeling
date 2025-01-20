@@ -12,7 +12,7 @@ n_staff     = 50                    # Number of staff to spawn (slider)
 n_mobile    = 100                   # Number of mobile agents to spawn (slider)
 n_chair     = 10                    # Number of wheelchair agents to spawn (slider)
 n_total     = 100                   # Total number of agents placed if spawn map is used (slider)
-steps       = 150                    # Number of timesteps (slider)
+steps       = 10                   # Number of timesteps (slider)
 use_map     = true                  # Use spawn map (true/false)
 vis_range   = 10                    # Range of agent vision
 real_vision = true                  # Use improved vision that is blocked by obstacles (true/false)
@@ -21,15 +21,15 @@ herd        = 0.60                  # Fraction of mobile agents that show herd m
 lift_use    = 0.50                  # Fraction of mobile agents that use the elevators if they come in sight
 follow_staff= 0.60
 floorplan   = "Floorplan_complex.csv"   # Which floorplan option to use (simple/complex)
-figsize     = 10                    # Which figure size to use (standard is 10)
+figsize     = 12                    # Which figure size to use (standard is 10)
 lift_time   = 15                    # Number of ticks the elevator takes for a cycle
 tile_pop    = 8                     # Maximum number of agents in a tile
 stair_pop   = 2                     # Maximum number of agents in a stair tile
 elevator_pop= 4                     # Maximum number of agents in an elevator tile
 lift_timer  = 50                    # Number of steps for a full elevator cycle
 lift_init   = 30                    # Number of steps on the timer at the start of the simulation
-lift_wait   = 15                    # Number of steps agent wait in the lift to simulate going down down and exiting
-neigh_dist  = 40                    # Neighbouring distance within which heloing agents need to be found
+lift_wait   = 15                    # Number of steps agent wait in the lift to simulate going down and exiting
+neigh_dist  = 40                    # Neighbouring distance within which helping agents need to be found
 
 # ------------------------------------------------------------------------------------------------
 # Floorplan parameters (ONLY CHANGE THESE IF THE FLOORPLAN IS OVERHAULED)
@@ -84,8 +84,8 @@ staff       = 0.3                   # Fraction of staff agents spawning in marke
 # ------------------------------------------------------------------------------------------------
 [ spawn_rules.5 ]
 mobile      = 0.0                   # Fraction of mobile agents spawning in marked areas of this type
-wheelchair  = 0.67                  # Fraction of wheelchair spawning in marked areas of this type
-staff       = 0.33                  # Fraction of staff agents spawning in marked areas of this type
+wheelchair  = 0.5                   # Fraction of wheelchair spawning in marked areas of this type
+staff       = 0.5                   # Fraction of staff agents spawning in marked areas of this type
 
 # ------------------------------------------------------------------------------------------------
 # index 6 - surgery: values must add up to 1
